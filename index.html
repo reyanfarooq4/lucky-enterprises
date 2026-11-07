@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucky Enterprises | Professional Printing Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --navy: #081c38;
+    --blue: #1764c0;
+    --light: #f4f7fc;
+    --text: #172b46;
+    --muted: #718096;
+    --green: #20bd63;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+}
+/* NAVBAR */
+nav {
+    background: white;
+    padding: 19px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 20px #00000008;
+}
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.8px;
+}
+.logo span {
+    color: var(--blue);
+}
+.nav-tag {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 600;
+}
+/* HERO */
+.hero {
+    background: linear-gradient(125deg, #071a34, #104d91);
+    color: white;
+    padding: 90px 8%;
+    position: relative;
+    overflow: hidden;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #ffffff20;
+    border-radius: 50%;
+    right: -80px;
+    top: -100px;
+    box-shadow: 0 0 0 45px #ffffff08,
+                0 0 0 90px #ffffff05;
+}
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 1;
+}
+.eyebrow {
+    display: inline-block;
+    background: #ffffff18;
+    border: 1px solid #ffffff30;
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #d5e8ff;
+}
+.hero h1 {
+    font-size: clamp(35px, 6vw, 58px);
+    line-height: 1.13;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+.hero h1 span {
+    color: #8fc4ff;
+}
+.hero p {
+    color: #d1e0f1;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 560px;
+}
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+.btn {
+    text-decoration: none;
+    padding: 15px 23px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.25s;
+}
+.btn-primary {
+    background: white;
+    color: var(--navy);
+}
+.btn-primary:hover {
+    background: #dcecff;
+    transform: translateY(-3px);
+}
+.btn-outline {
+    border: 1px solid #ffffff70;
+    color: white;
+}
+.btn-outline:hover {
+    background: #ffffff18;
+}
+/* TRUST STRIP */
+.trust {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: white;
+    padding: 25px 8%;
+    text-align: center;
+    border-bottom: 1px solid #e9eef5;
+}
+.trust-item {
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.trust-item span {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 5px;
+}
+/* SECTION */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 75px 22px;
+}
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-heading small {
+    color: var(--blue);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 11px;
+}
+.section-heading h2 {
+    font-size: 30px;
+    margin-top: 12px;
+    letter-spacing: -1px;
+}
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 12px;
+}
+/* SERVICES */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 19px;
+}
+.service-card {
+    background: white;
+    padding: 28px 24px;
+    border-radius: 14px;
+    border: 1px solid #e9eef5;
+    transition: 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #163b6712;
+    border-color: #c6dcf8;
+}
+.service-icon {
+    width: 48px;
+    height: 48px;
+    background: #eaf3ff;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+.service-card h3 {
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+.service-card p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+/* CTA */
+.cta {
+    margin: 0 7% 75px;
+    padding: 55px 25px;
+    border-radius: 18px;
+    text-align: center;
+    background: linear-gradient(120deg, #0b2a50, #1764c0);
+    color: white;
+}
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 13px;
+}
+.cta p {
+    color: #d6e6f9;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.cta .btn {
+    margin-top: 23px;
+}
+/* FOOTER */
+footer {
+    background: #071a33;
+    color: white;
+    padding: 40px 8% 25px;
+    text-align: center;
+}
+footer h3 {
+    font-size: 21px;
+    margin-bottom: 13px;
+}
+footer p {
+    color: #b8c9dd;
+    font-size: 12px;
+    margin: 9px 0;
+}
+.copyright {
+    border-top: 1px solid #ffffff20;
+    margin-top: 27px;
+    padding-top: 20px;
+    color: #8fa6c0;
+    font-size: 11px;
+}
+/* FLOATING WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 20px;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 26px;
+    box-shadow: 0 5px 20px #00000030;
+    z-index: 10;
+}
+/* MOBILE */
+@media(max-width: 700px) {
+    .hero {
+        padding: 70px 23px;
+    }
+    .trust {
+        padding: 20px 8px;
+    }
+    .trust-item {
+        font-size: 11px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .service-card {
+        padding: 20px 15px;
+    }
+    .section-heading h2 {
+        font-size: 25px;
+    }
+    .cta {
+        margin: 0 15px 55px;
+    }
+}
+@media(max-width: 380px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+<nav>
+    <div class="logo">LUCKY <span>ENTERPRISES.</span></div>
+    <div class="nav-tag">PRINTING SERVICES</div>
+</nav>
+<section class="hero">
+    <div class="hero-content">
+        <div class="eyebrow">YOUR TRUSTED PRINTING PARTNER</div>
+        <h1>
+            Your Ideas.<br>
+            Our <span>Printing.</span><br>
+            Perfect Results.
+        </h1>
+        <p>
+            From everyday document printing to professional banners,
+            visiting cards and custom printing solutions.
+            We bring your ideas to life with quality and care.
+        </p>
+        <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">
+                EXPLORE SERVICES →
+            </a>
+            <a href="https://wa.me/917889427636"
+               class="btn btn-outline">
+                CONTACT US
+            </a>
+        </div>
+    </div>
+</section>
+<section class="trust">
+    <div class="trust-item">
+        ✓ Quality Printing
+        <span>Attention to detail</span>
+    </div>
+    <div class="trust-item">
+        ✓ Multiple Services
+        <span>All your printing needs</span>
+    </div>
+    <div class="trust-item">
+        ✓ Easy Ordering
+        <span>Connect through WhatsApp</span>
+    </div>
+</section>
+<section class="section" id="services">
+    <div class="section-heading">
+        <small>WHAT WE OFFER</small>
+        <h2>Our Printing Services</h2>
+        <p>Everything you need, all in one place.</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">📄</div>
+            <h3>Black & White Printing</h3>
+            <p>Clear and affordable document printing for everyday needs.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Colour Printing</h3>
+            <p>Vibrant colour prints with excellent presentation.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🖨️</div>
+            <h3>Document Printing</h3>
+            <p>Professional printing for documents and other materials.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🏢</div>
+            <h3>Flex Boards</h3>
+            <p>Custom flex boards for businesses and advertisements.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🪧</div>
+            <h3>Flex Banners</h3>
+            <p>Eye-catching banners for events and promotions.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">💳</div>
+            <h3>Visiting Cards</h3>
+            <p>Professional business cards that make a lasting impression.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🔖</div>
+            <h3>Stamps</h3>
+            <p>Custom stamps for personal and business requirements.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">✨</div>
+            <h3>Vinyl & Vision Printing</h3>
+            <p>Custom printing solutions for different applications.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">➕</div>
+            <h3>Much More</h3>
+            <p>Have something specific in mind? Contact us to discuss it.</p>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <h2>Ready to Get Printing?</h2>
+    <p>
+        Have a document, banner or custom printing requirement?
+        Get in touch with Lucky Enterprises today.
+    </p>
+    <a href="https://wa.me/917889427636?text=Hello%20Lucky%20Enterprises!%20I%20want%20to%20enquire%20about%20printing."
+       class="btn btn-primary">
+        CHAT WITH US ON WHATSAPP →
+    </a>
+</section>
+<footer>
+    <h3>LUCKY ENTERPRISES</h3>
+    <p>YOUR TRUSTED PRINTING PARTNER</p>
+    <p>📍 Bemina, Near Degree College</p>
+    <p>📞 +91 78894 27636</p>
+    <p>Thank you for choosing Lucky Enterprises.</p>
+    <div class="copyright">
+        © 2026 Lucky Enterprises. All Rights Reserved.
+    </div>
+</footer>
+<a class="whatsapp-float"
+   href="https://wa.me/917889427636"
+   aria-label="Chat on WhatsApp">
+    ☎
+</a>
+</body>
+</html>
